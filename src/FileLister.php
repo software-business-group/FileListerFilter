@@ -33,9 +33,8 @@ class FileLister implements Iterator
 {
     private $position = 0;
     private $array = array(
-        "firstelement",
-        "secondelement",
-        "lastelement",
+        "text",
+        "ąśπąśż",
     );
 
     public function __construct()

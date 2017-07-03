@@ -26,12 +26,13 @@ namespace Aaugustyniak\FileListerFilter\Filter;
 
 use Aaugustyniak\FileListerFilter\PathFilter;
 use \Traversable as Collection;
+use \ArrayObject as ArrayCollection;
 
 
 /**
  * @author Artur Augustyniak <artur@aaugustyniak.pl>
  */
-class TextFileFilter implements Filter
+class AsciiFileFilter implements Filter
 {
 
 
@@ -41,6 +42,9 @@ class TextFileFilter implements Filter
      */
     function filter(Collection $c)
     {
-        return $c;
+        $isAsciiText = function ($item) {
+            return !preg_match('/[^\x20-\x7f]/', $item);
+        };
+        return new \ArrayObject(array_filter(iterator_to_array($c, false), $isAsciiText));
     }
 }

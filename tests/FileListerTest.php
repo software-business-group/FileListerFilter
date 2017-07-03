@@ -25,7 +25,7 @@ namespace Aaugustyniak\Tests;
 
 
 use Aaugustyniak\FileListerFilter\FileLister;
-use Aaugustyniak\FileListerFilter\Filter\TextFileFilter;
+use Aaugustyniak\FileListerFilter\Filter\AsciiFileFilter;
 use \PHPUnit_Framework_TestCase as TestCase;
 use \Mockery as m;
 
@@ -43,8 +43,8 @@ class FileListerTest extends TestCase
     public function testCanCallStartOnlyOnce()
     {
         $fl = new FileLister();
-        $tfl = new TextFileFilter();
-        var_dump($tfl->filter($fl));
+        $aff = new AsciiFileFilter();
+        var_dump($aff->filter($aff->filter($fl)));
     }
 
 }
