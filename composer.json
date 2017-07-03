@@ -1,0 +1,26 @@
+ {
+    "name": "aaugustyniak/filelisterfilter",
+    "type": "library",
+    "description": "Filter listed files",
+    "license": "MIT",
+    "keywords": ["file", "filter"],
+    "homepage": "https://github.com/artur-augustyniak/FileListerFilter",
+    "authors": [
+        {
+            "name": "Artur Augustyniak",
+            "email": "artur@aaugustyniak.pl",
+            "homepage": "https://github.com/artur-augustyniak",
+            "role": "Developer"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+         "phpunit/phpunit": "5.7.21",
+         "mockery/mockery": "0.9.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Aaugustyniak\\FileListerFilter\\": "src"
+        }
+    }
+}
